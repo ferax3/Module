@@ -1,8 +1,27 @@
 ul, ul li {
 	list-style: none;
 }
+a, a:link, a:visited  {
+    text-decoration: none;
+}
 body{
-    background-color: blueviolet;
+    background-color: rgb(233, 92, 11);
+    font-family: 'Times New Roman', Times, serif;
+}
+img{
+    width: 350px;
+}
+p{
+    font-size: 15px;
+}
+h1{
+    font-size: 35px;
+}
+h3{
+    font-size: 25px;
+}
+h5{
+    font-size: 18px;
 }
 header{
     display: flex;
@@ -19,14 +38,55 @@ nav ul li{
     display: inline-block;
     padding-right: 25px;
 }
+nav ul li a{
+    color: black;
+}
+nav ul li a:hover{
+    color: rgb(100, 239, 14);
+    text-decoration: underline;
+}
+
+/* main */
 main{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+.sideMenu{
+    display: flex;
+    flex-direction: column;
+    width: 17%;
+}
+.sideMenu ul{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+.sideMenu ul li{
+    display: inline-block;
+}
+.sideMenu ul li a{
+    color: black;
+}
+.sideMenu ul li a:hover{
+    color: rgb(100, 239, 14);
 }
 
-
-
+.content{
+    width: 68%;
+    background-color: rgb(92, 181, 19);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+}
+.content section article{
+    width: 50%;
+}
+main aside{
+    width: 15%;
+}
 
 footer{
     display: flex;
@@ -35,4 +95,45 @@ footer{
 }
 footer p{
     text-align: center;
+}
+@media screen and (max-width: 1132px){
+    main{
+        flex-direction: column;
+    }
+    .content{
+        order: -1;
+        width: 100%;
+    }
+    main aside{
+        display: none;
+    }
+    .sideMenu{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+@media screen and (max-width:770px){
+    img{
+        display: none;
+    }
+}
+@media screen  and (max-width:560px){
+    .content{
+        flex-direction: column;
+    }
+    .sideMenu h3{
+        display: none;
+    }
+}
+@media screen  and (max-width:490px){
+
+    .sideMenu{
+        flex-direction: column;
+    }
+    .sideMenu p{
+        margin: auto;
+    }
 }
