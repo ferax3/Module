@@ -1,3 +1,5 @@
+/* BEM */
+/* style */
 ul, ul li {
 	list-style: none;
 }
@@ -14,20 +16,22 @@ img{
 p{
     font-size: 15px;
 }
-h1{
-    font-size: 35px;
-}
 h3{
     font-size: 25px;
 }
 h5{
     font-size: 18px;
 }
+/* header */
 header{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+/* BEM */
+.headerLeft{
+    font-size: 48px;
 }
 nav{
     display: flex;
@@ -87,7 +91,6 @@ main{
 main aside{
     width: 15%;
 }
-
 footer{
     display: flex;
     justify-content: center;
@@ -96,7 +99,11 @@ footer{
 footer p{
     text-align: center;
 }
+/* media */
 @media screen and (max-width: 1132px){
+    .headerLeft{
+        font-size: 35px;
+    }
     main{
         flex-direction: column;
     }
@@ -113,6 +120,9 @@ footer p{
         justify-content: space-between;
         align-items: center;
     }
+    .sideMenu h3{
+        display: none;
+    }
 
 }
 @media screen and (max-width:770px){
@@ -124,8 +134,8 @@ footer p{
     .content{
         flex-direction: column;
     }
-    .sideMenu h3{
-        display: none;
+    .headerLeft{
+        font-size: 25px;
     }
 }
 @media screen  and (max-width:490px){
@@ -134,6 +144,6 @@ footer p{
         flex-direction: column;
     }
     .sideMenu p{
-        margin: auto;
+        margin: 0%;
     }
 }
